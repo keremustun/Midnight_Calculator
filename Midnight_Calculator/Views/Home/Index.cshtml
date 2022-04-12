@@ -1,24 +1,48 @@
 ﻿@{
-//ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
     @*DateTime midnight = (DateTime.)*@
-DateTime maghrib = (DateTime)ViewData["maghrib"];
-DateTime fajr = (DateTime)ViewData["fajr"];
+    DateTime maghrib = (DateTime)ViewData["maghrib"];
+    DateTime fajr = (DateTime)ViewData["fajr"];
 
 }
 
-<div class="text-center">
-    <h1 class="display-4">Midnight Calculator</h1>
+<div style="margin-top:3em">
+    <div class="text-center">
+        <h1 class="">Midnight Calculator</h1>
+        <h5>Some scholars hold the view that the time for the `Ishaa' prayer is until midnight</h5>
+    </div>
 </div>
 
-<div>
+
+<div style="margin-top:18em">
     <form asp-route="/" method="post">
-        Maghrib: <input type="time" name="maghrib" value="@($"{(maghrib.Hour < 10 ? "0" + maghrib.Hour : "" + maghrib.Hour)}:{(maghrib.Minute < 10 ? "0" + maghrib.Minute : "" + maghrib.Minute)}")"/>
+
+        <div class="row">
+        
+            <div class="col">
+                <div class="text-right">
+                    Maghrib: <input type="time" name="maghrib" value="@($"{(maghrib.Hour < 10 ? "0" + maghrib.Hour : "" + maghrib.Hour)}:{(maghrib.Minute < 10 ? "0" + maghrib.Minute : "" + maghrib.Minute)}")" />
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="text-left">
+                    Fajr:    <input type="time" name="fajr" value="@($"{(fajr.Hour < 10 ? "0" + fajr.Hour : "" + fajr.Hour)}:{(fajr.Minute < 10 ? "0" + fajr.Minute : "" + fajr.Minute)}")" />
+                </div>
+            </div>
+            
+        </div>
+        
         <p></p>
-        Fajr:    <input type="time" name="fajr" value="@($"{(fajr.Hour < 10 ? "0" + fajr.Hour : "" + fajr.Hour)}:{(fajr.Minute < 10 ? "0" + fajr.Minute : "" + fajr.Minute)}")"/>
+        <div class="text-center">
+            Midnight: @ViewData["Midnight"]
+        </div>
+
         <p></p>
-        Midnight: @ViewData["Midnight"]
-        <p></p>
-        <button type="submit">Calculate</button>
+        <div class="text-center">
+            <button class="btn-primary" type="submit">Calculate</button>
+
+        </div>
     </form>
 
 </div>
