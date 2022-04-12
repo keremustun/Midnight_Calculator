@@ -1,0 +1,24 @@
+﻿@{
+//ViewData["Title"] = "Home Page";
+    @*DateTime midnight = (DateTime.)*@
+DateTime maghrib = (DateTime)ViewData["maghrib"];
+DateTime fajr = (DateTime)ViewData["fajr"];
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Midnight Calculator</h1>
+</div>
+
+<div>
+    <form asp-route="/" method="post">
+        Maghrib: <input type="time" name="maghrib" value="@($"{(maghrib.Hour < 10 ? "0" + maghrib.Hour : "" + maghrib.Hour)}:{(maghrib.Minute < 10 ? "0" + maghrib.Minute : "" + maghrib.Minute)}")"/>
+        <p></p>
+        Fajr:    <input type="time" name="fajr" value="@($"{(fajr.Hour < 10 ? "0" + fajr.Hour : "" + fajr.Hour)}:{(fajr.Minute < 10 ? "0" + fajr.Minute : "" + fajr.Minute)}")"/>
+        <p></p>
+        Midnight: @ViewData["Midnight"]
+        <p></p>
+        <button type="submit">Calculate</button>
+    </form>
+
+</div>
