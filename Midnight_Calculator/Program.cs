@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Midnight_Calculator
 {
@@ -13,7 +14,13 @@ namespace Midnight_Calculator
     {
         public static void Main(string[] args)
         {
+            OpenBrowser("http://localhost:5000/");
             CreateHostBuilder(args).Build().Run();
+        }
+
+        public static void OpenBrowser(string url)
+        {
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
