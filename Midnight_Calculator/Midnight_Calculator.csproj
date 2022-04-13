@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <ApplicationIcon>Untitled design-modified.ico</ApplicationIcon>
+    <UserSecretsId>29c08ab2-fcd3-49b4-b7a7-b88764258244</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

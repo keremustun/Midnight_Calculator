@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\kerem\Desktop\MidCalc</_PublishTargetUrl>
-    <History>True|2022-04-12T09:31:03.5242616Z;</History>
+    <History>True|2022-04-12T21:17:04.1253857Z;True|2022-04-12T11:31:03.5242616+02:00;</History>
   </PropertyGroup>
 </Project>
